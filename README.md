@@ -1,7 +1,7 @@
 # TinyCircuits TinyDuino Processor Board
-# ASM2001 Rev4
+# ASM2001 Rev6
 
-These are the design files for the TinyCircuits ASM2001 Rev 4 PCB.  This is a Tiny processor board (Square Version, 20mm x 20mm, or Circular 20mm diameter) that uses the same microcontroller (Atmel Atmega328P) as the Arduino Uno and has stackable TinyShield support.  
+These are the design files for the TinyCircuits ASM2001 Rev 6 PCB.  This is a Tiny processor board (Square Version, 20mm x 20mm, or Circular 20mm diameter) that uses the same microcontroller (Atmel Atmega328P) as the Arduino Uno and has stackable TinyShield support.  
 
 Format is in Cadsoft Eagle format - Eagle version 6.2 was used for the original design.
 

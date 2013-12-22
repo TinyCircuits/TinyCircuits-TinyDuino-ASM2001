@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.2">
+<eagle version="6.3">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -79,11 +79,26 @@
 <layer number="105" name="tPlate" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="106" name="bPlate" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="107" name="Crop" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="108" name="fp8" color="7" fill="1" visible="no" active="yes"/>
+<layer number="109" name="fp9" color="7" fill="1" visible="no" active="yes"/>
+<layer number="110" name="fp0" color="7" fill="1" visible="no" active="yes"/>
+<layer number="111" name="LPC17xx" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="112" name="tSilk" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="116" name="Patch_BOT" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="121" name="_tsilk" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="122" name="_bsilk" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="123" name="tTestmark" color="7" fill="1" visible="no" active="yes"/>
+<layer number="124" name="bTestmark" color="7" fill="1" visible="no" active="yes"/>
+<layer number="125" name="_tNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="126" name="_bNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="127" name="_tValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="128" name="_bValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="131" name="tAdjust" color="7" fill="1" visible="no" active="yes"/>
+<layer number="132" name="bAdjust" color="7" fill="1" visible="no" active="yes"/>
 <layer number="144" name="Drill_legend" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="151" name="HeatSink" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="152" name="_bDocu" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="199" name="Contour" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="200" name="200bmp" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="201" name="201bmp" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="202" name="202bmp" color="7" fill="1" visible="yes" active="yes"/>
@@ -109,6 +124,8 @@
 <layer number="222" name="222bmp" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="223" name="223bmp" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="224" name="224bmp" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="248" name="Housing" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="249" name="Edge" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="250" name="Descript" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="251" name="SMDround" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="254" name="cooling" color="7" fill="1" visible="yes" active="yes"/>
@@ -147,10 +164,10 @@
 <packages>
 <package name="3013">
 <description>Keystone 3013 - RETAINER COIN CELL 16MM PC T/H</description>
-<wire x1="-8.3439" y1="6.4643" x2="8.4328" y2="6.4643" width="0.127" layer="21"/>
+<wire x1="-8.3439" y1="3.9243" x2="8.4328" y2="3.9243" width="0.127" layer="21"/>
 <wire x1="-3.6703" y1="-8.7503" x2="4.0259" y2="-8.7503" width="0.127" layer="21"/>
-<wire x1="-8.382" y1="-4.2164" x2="-8.3439" y2="6.4643" width="0.127" layer="21"/>
-<wire x1="8.4582" y1="-4.2164" x2="8.4328" y2="6.4643" width="0.127" layer="21"/>
+<wire x1="-8.382" y1="-4.2164" x2="-8.3439" y2="3.9243" width="0.127" layer="21"/>
+<wire x1="8.4582" y1="-4.2164" x2="8.4328" y2="3.9243" width="0.127" layer="21"/>
 <wire x1="-8.382" y1="-4.2164" x2="-3.6703" y2="-8.7503" width="0.127" layer="21"/>
 <wire x1="4.0259" y1="-8.7503" x2="8.4582" y2="-4.2164" width="0.127" layer="21"/>
 <pad name="2" x="-8.4328" y="0" drill="1.8542" rot="R90"/>
@@ -174,8 +191,8 @@
 <wire x1="0.9907" y1="0.3504" x2="0.9907" y2="-0.3432" width="0.127" layer="51"/>
 <wire x1="0.9907" y1="-0.3432" x2="-0.998" y2="-0.3432" width="0.127" layer="51"/>
 <wire x1="-0.998" y1="-0.3432" x2="-0.998" y2="0.3504" width="0.127" layer="51"/>
-<smd name="1" x="-0.6" y="0" dx="0.7" dy="0.6" layer="1"/>
-<smd name="2" x="0.6" y="0" dx="0.7" dy="0.6" layer="1"/>
+<smd name="1" x="-0.6" y="0" dx="0.65" dy="0.55" layer="1"/>
+<smd name="2" x="0.6" y="0" dx="0.65" dy="0.55" layer="1"/>
 <text x="0" y="0" size="0.3048" layer="25" align="center">&gt;NAME</text>
 </package>
 <package name="SOT-563-6">
@@ -199,24 +216,6 @@
 <rectangle x1="-0.175" y1="0.648" x2="0.175" y2="1.173" layer="51"/>
 <rectangle x1="-0.6805" y1="0.648" x2="-0.3305" y2="1.173" layer="51"/>
 <circle x="-0.569" y="-0.4262" radius="0.1" width="0.2032" layer="51"/>
-</package>
-<package name="SOT23">
-<description>&lt;b&gt;SOT-23&lt;/b&gt;</description>
-<wire x1="1.4224" y1="0.6604" x2="1.4224" y2="-0.6604" width="0.1524" layer="51"/>
-<wire x1="1.4224" y1="-0.6604" x2="-1.4224" y2="-0.6604" width="0.1524" layer="51"/>
-<wire x1="-1.4224" y1="-0.6604" x2="-1.4224" y2="0.6604" width="0.1524" layer="51"/>
-<wire x1="-1.4224" y1="0.6604" x2="1.4224" y2="0.6604" width="0.1524" layer="51"/>
-<wire x1="-1.4224" y1="-0.1854" x2="-1.4224" y2="0.6604" width="0.1524" layer="21"/>
-<wire x1="-1.4224" y1="0.6604" x2="-0.6576" y2="0.6604" width="0.1524" layer="21"/>
-<wire x1="1.4224" y1="0.6604" x2="1.4224" y2="-0.1854" width="0.1524" layer="21"/>
-<wire x1="0.6326" y1="0.6604" x2="1.4224" y2="0.6604" width="0.1524" layer="21"/>
-<smd name="3" x="0" y="1.1" dx="1" dy="1.4" layer="1"/>
-<smd name="2" x="0.95" y="-1.1" dx="1" dy="1.4" layer="1"/>
-<smd name="1" x="-0.95" y="-1.1" dx="1" dy="1.4" layer="1"/>
-<text x="0" y="0" size="0.4572" layer="25" align="center">&gt;NAME</text>
-<rectangle x1="-0.2286" y1="0.7112" x2="0.2286" y2="1.2954" layer="51"/>
-<rectangle x1="0.7112" y1="-1.2954" x2="1.1684" y2="-0.7112" layer="51"/>
-<rectangle x1="-1.1684" y1="-1.2954" x2="-0.7112" y2="-0.7112" layer="51"/>
 </package>
 <package name="LNJ_LED">
 <description>LED GREEN SIDE VIEW SMD</description>
@@ -270,8 +269,20 @@
 <smd name="4" x="2.5781" y="-0.8509" dx="1.4478" dy="0.9906" layer="1" roundness="15"/>
 <smd name="5" x="2.032" y="-2.1336" dx="0.7112" dy="0.762" layer="1" roundness="15"/>
 <text x="0" y="0" size="0.635" layer="25" align="center">&gt;NAME</text>
-<hole x="0" y="-1.3462" drill="0.8382"/>
-<hole x="0" y="1.3462" drill="0.8382"/>
+<hole x="0" y="-1.3462" drill="1.0922"/>
+<hole x="0" y="1.3462" drill="1.0922"/>
+<polygon width="0.127" layer="29">
+<vertex x="-1" y="1.34" curve="-90"/>
+<vertex x="0" y="2.34" curve="-90"/>
+<vertex x="1" y="1.34" curve="-90"/>
+<vertex x="0" y="0.34" curve="-90"/>
+</polygon>
+<polygon width="0.127" layer="29">
+<vertex x="-1" y="-1.34" curve="-90"/>
+<vertex x="0" y="-0.34" curve="-90"/>
+<vertex x="1" y="-1.34" curve="-90"/>
+<vertex x="0" y="-2.34" curve="-90"/>
+</polygon>
 </package>
 <package name="RESONATOR">
 <wire x1="-1.9634" y1="1.2992" x2="1.9744" y2="1.2992" width="0.1016" layer="51"/>
@@ -287,8 +298,8 @@
 <description>&lt;b&gt;CAPACITOR&lt;/b&gt;</description>
 <wire x1="-1.0324" y1="0.4272" x2="1.0324" y2="0.4272" width="0.1016" layer="51"/>
 <wire x1="1.007" y1="-0.4272" x2="-1.0324" y2="-0.4272" width="0.1016" layer="51"/>
-<smd name="1" x="-0.65" y="0" dx="0.7" dy="0.9" layer="1"/>
-<smd name="2" x="0.65" y="0" dx="0.7" dy="0.9" layer="1"/>
+<smd name="1" x="-0.65" y="0" dx="0.65" dy="0.6" layer="1"/>
+<smd name="2" x="0.65" y="0" dx="0.65" dy="0.6" layer="1"/>
 <text x="0" y="0" size="0.381" layer="25" align="center">&gt;NAME</text>
 <wire x1="-1.0414" y1="0.4318" x2="-1.0414" y2="-0.4064" width="0.1016" layer="51"/>
 <wire x1="1.0414" y1="0.4318" x2="1.0414" y2="-0.4318" width="0.1016" layer="51"/>
@@ -775,39 +786,39 @@ Source: http://datasheets.maxim-ic.com/en/ds/MAX7042.pdf</description>
 <wire x1="-6.242" y1="2.7352" x2="6.2319" y2="2.7225" width="0.2" layer="39"/>
 <circle x="-3.7592" y="-2.9972" radius="0.127" width="0.127" layer="21"/>
 <smd name="F1" x="-5.5" y="0" dx="0.9" dy="1.8" layer="1"/>
-<smd name="18" x="0.25" y="1.8001" dx="0.3" dy="1.6" layer="1"/>
-<smd name="20" x="0.75" y="1.8001" dx="0.3" dy="1.6" layer="1"/>
-<smd name="14" x="-0.75" y="1.8001" dx="0.3" dy="1.6" layer="1"/>
-<smd name="16" x="-0.25" y="1.8001" dx="0.3" dy="1.6" layer="1"/>
-<smd name="22" x="1.25" y="1.8001" dx="0.3" dy="1.6" layer="1"/>
-<smd name="17" x="0.25" y="-1.8001" dx="0.3" dy="1.6" layer="1"/>
-<smd name="15" x="-0.25" y="-1.8001" dx="0.3" dy="1.6" layer="1"/>
-<smd name="13" x="-0.75" y="-1.8001" dx="0.3" dy="1.6" layer="1"/>
-<smd name="21" x="1.25" y="-1.8001" dx="0.3" dy="1.6" layer="1"/>
-<smd name="19" x="0.75" y="-1.8001" dx="0.3" dy="1.6" layer="1"/>
+<smd name="18" x="0.25" y="1.8001" dx="0.3" dy="1.6" layer="1" cream="no"/>
+<smd name="20" x="0.75" y="1.8001" dx="0.3" dy="1.6" layer="1" cream="no"/>
+<smd name="14" x="-0.75" y="1.8001" dx="0.3" dy="1.6" layer="1" cream="no"/>
+<smd name="16" x="-0.25" y="1.8001" dx="0.3" dy="1.6" layer="1" cream="no"/>
+<smd name="22" x="1.25" y="1.8001" dx="0.3" dy="1.6" layer="1" cream="no"/>
+<smd name="17" x="0.25" y="-1.8001" dx="0.3" dy="1.6" layer="1" cream="no"/>
+<smd name="15" x="-0.25" y="-1.8001" dx="0.3" dy="1.6" layer="1" cream="no"/>
+<smd name="13" x="-0.75" y="-1.8001" dx="0.3" dy="1.6" layer="1" cream="no"/>
+<smd name="21" x="1.25" y="-1.8001" dx="0.3" dy="1.6" layer="1" cream="no"/>
+<smd name="19" x="0.75" y="-1.8001" dx="0.3" dy="1.6" layer="1" cream="no"/>
 <smd name="F2" x="5.5" y="0" dx="0.9" dy="1.8" layer="1"/>
-<smd name="12" x="-1.25" y="1.8001" dx="0.3" dy="1.6" layer="1"/>
-<smd name="10" x="-1.75" y="1.8001" dx="0.3" dy="1.6" layer="1"/>
-<smd name="11" x="-1.25" y="-1.8001" dx="0.3" dy="1.6" layer="1"/>
-<smd name="24" x="1.75" y="1.8001" dx="0.3" dy="1.6" layer="1"/>
-<smd name="26" x="2.25" y="1.8001" dx="0.3" dy="1.6" layer="1"/>
-<smd name="8" x="-2.25" y="1.8001" dx="0.3" dy="1.6" layer="1"/>
-<smd name="23" x="1.75" y="-1.8001" dx="0.3" dy="1.6" layer="1"/>
-<smd name="7" x="-2.25" y="-1.8001" dx="0.3" dy="1.6" layer="1"/>
-<smd name="25" x="2.25" y="-1.8001" dx="0.3" dy="1.6" layer="1"/>
-<smd name="9" x="-1.75" y="-1.8001" dx="0.3" dy="1.6" layer="1"/>
-<smd name="6" x="-2.75" y="1.8001" dx="0.3" dy="1.6" layer="1"/>
-<smd name="28" x="2.75" y="1.8001" dx="0.3" dy="1.6" layer="1"/>
-<smd name="27" x="2.75" y="-1.8001" dx="0.3" dy="1.6" layer="1"/>
-<smd name="5" x="-2.75" y="-1.8001" dx="0.3" dy="1.6" layer="1"/>
-<smd name="4" x="-3.25" y="1.8001" dx="0.3" dy="1.6" layer="1"/>
-<smd name="30" x="3.25" y="1.8001" dx="0.3" dy="1.6" layer="1"/>
-<smd name="29" x="3.25" y="-1.8001" dx="0.3" dy="1.6" layer="1"/>
-<smd name="3" x="-3.25" y="-1.8001" dx="0.3" dy="1.6" layer="1"/>
-<smd name="2" x="-3.75" y="1.8001" dx="0.3" dy="1.6" layer="1"/>
-<smd name="32" x="3.75" y="1.8001" dx="0.3" dy="1.6" layer="1"/>
-<smd name="31" x="3.75" y="-1.8001" dx="0.3" dy="1.6" layer="1"/>
-<smd name="1" x="-3.75" y="-1.8001" dx="0.3" dy="1.6" layer="1"/>
+<smd name="12" x="-1.25" y="1.8001" dx="0.3" dy="1.6" layer="1" cream="no"/>
+<smd name="10" x="-1.75" y="1.8001" dx="0.3" dy="1.6" layer="1" cream="no"/>
+<smd name="11" x="-1.25" y="-1.8001" dx="0.3" dy="1.6" layer="1" cream="no"/>
+<smd name="24" x="1.75" y="1.8001" dx="0.3" dy="1.6" layer="1" cream="no"/>
+<smd name="26" x="2.25" y="1.8001" dx="0.3" dy="1.6" layer="1" cream="no"/>
+<smd name="8" x="-2.25" y="1.8001" dx="0.3" dy="1.6" layer="1" cream="no"/>
+<smd name="23" x="1.75" y="-1.8001" dx="0.3" dy="1.6" layer="1" cream="no"/>
+<smd name="7" x="-2.25" y="-1.8001" dx="0.3" dy="1.6" layer="1" cream="no"/>
+<smd name="25" x="2.25" y="-1.8001" dx="0.3" dy="1.6" layer="1" cream="no"/>
+<smd name="9" x="-1.75" y="-1.8001" dx="0.3" dy="1.6" layer="1" cream="no"/>
+<smd name="6" x="-2.75" y="1.8001" dx="0.3" dy="1.6" layer="1" cream="no"/>
+<smd name="28" x="2.75" y="1.8001" dx="0.3" dy="1.6" layer="1" cream="no"/>
+<smd name="27" x="2.75" y="-1.8001" dx="0.3" dy="1.6" layer="1" cream="no"/>
+<smd name="5" x="-2.75" y="-1.8001" dx="0.3" dy="1.6" layer="1" cream="no"/>
+<smd name="4" x="-3.25" y="1.8001" dx="0.3" dy="1.6" layer="1" cream="no"/>
+<smd name="30" x="3.25" y="1.8001" dx="0.3" dy="1.6" layer="1" cream="no"/>
+<smd name="29" x="3.25" y="-1.8001" dx="0.3" dy="1.6" layer="1" cream="no"/>
+<smd name="3" x="-3.25" y="-1.8001" dx="0.3" dy="1.6" layer="1" cream="no"/>
+<smd name="2" x="-3.75" y="1.8001" dx="0.3" dy="1.6" layer="1" cream="no"/>
+<smd name="32" x="3.75" y="1.8001" dx="0.3" dy="1.6" layer="1" cream="no"/>
+<smd name="31" x="3.75" y="-1.8001" dx="0.3" dy="1.6" layer="1" cream="no"/>
+<smd name="1" x="-3.75" y="-1.8001" dx="0.3" dy="1.6" layer="1" cream="no"/>
 <text x="0" y="0" size="0.635" layer="25" align="center">&gt;NAME</text>
 <rectangle x1="-0.8829" y1="1.651" x2="0.3871" y2="1.8542" layer="51" rot="R90"/>
 <rectangle x1="-1.3833" y1="-1.9685" x2="-0.1133" y2="-1.7653" layer="51" rot="R90"/>
@@ -844,6 +855,79 @@ Source: http://datasheets.maxim-ic.com/en/ds/MAX7042.pdf</description>
 <hole x="-4.8" y="1.5" drill="0.6"/>
 <hole x="4.8" y="1.5" drill="0.6"/>
 <circle x="-4.2164" y="-2.413" radius="0.127" width="0.127" layer="51"/>
+<polygon width="0.127" layer="29">
+<vertex x="-5.5626" y="1.4986" curve="90"/>
+<vertex x="-4.8006" y="0.7366" curve="90"/>
+<vertex x="-4.0386" y="1.4986" curve="90"/>
+<vertex x="-4.8006" y="2.2606" curve="90"/>
+</polygon>
+<polygon width="0.127" layer="29">
+<vertex x="4.0386" y="1.4986" curve="90"/>
+<vertex x="4.8006" y="0.7366" curve="90"/>
+<vertex x="5.5626" y="1.4986" curve="90"/>
+<vertex x="4.8006" y="2.2606" curve="90"/>
+</polygon>
+<rectangle x1="-3.8622" y1="-2.5034" x2="-3.6422" y2="-1.2034" layer="31"/>
+<rectangle x1="-3.8622" y1="1.2066" x2="-3.6422" y2="2.5066" layer="31"/>
+<rectangle x1="-3.3622" y1="1.2066" x2="-3.1422" y2="2.5066" layer="31"/>
+<rectangle x1="-2.8622" y1="1.2066" x2="-2.6422" y2="2.5066" layer="31"/>
+<rectangle x1="-2.3622" y1="1.2066" x2="-2.1422" y2="2.5066" layer="31"/>
+<rectangle x1="-1.8622" y1="1.2066" x2="-1.6422" y2="2.5066" layer="31"/>
+<rectangle x1="-1.3622" y1="1.2066" x2="-1.1422" y2="2.5066" layer="31"/>
+<rectangle x1="-0.8622" y1="1.2066" x2="-0.6422" y2="2.5066" layer="31"/>
+<rectangle x1="-0.3622" y1="1.2066" x2="-0.1422" y2="2.5066" layer="31"/>
+<rectangle x1="0.1378" y1="1.2066" x2="0.3578" y2="2.5066" layer="31"/>
+<rectangle x1="0.6378" y1="1.2066" x2="0.8578" y2="2.5066" layer="31"/>
+<rectangle x1="1.1378" y1="1.2066" x2="1.3578" y2="2.5066" layer="31"/>
+<rectangle x1="1.6378" y1="1.2066" x2="1.8578" y2="2.5066" layer="31"/>
+<rectangle x1="2.1378" y1="1.2066" x2="2.3578" y2="2.5066" layer="31"/>
+<rectangle x1="2.6378" y1="1.2066" x2="2.8578" y2="2.5066" layer="31"/>
+<rectangle x1="3.1478" y1="1.2066" x2="3.3678" y2="2.5066" layer="31"/>
+<rectangle x1="3.6378" y1="1.2066" x2="3.8578" y2="2.5066" layer="31"/>
+<rectangle x1="-3.3622" y1="-2.5034" x2="-3.1422" y2="-1.2034" layer="31"/>
+<rectangle x1="-2.8622" y1="-2.5034" x2="-2.6422" y2="-1.2034" layer="31"/>
+<rectangle x1="-2.3622" y1="-2.5034" x2="-2.1422" y2="-1.2034" layer="31"/>
+<rectangle x1="-1.8622" y1="-2.5034" x2="-1.6422" y2="-1.2034" layer="31"/>
+<rectangle x1="-1.3622" y1="-2.5034" x2="-1.1422" y2="-1.2034" layer="31"/>
+<rectangle x1="-0.8622" y1="-2.5034" x2="-0.6422" y2="-1.2034" layer="31"/>
+<rectangle x1="-0.3622" y1="-2.5034" x2="-0.1422" y2="-1.2034" layer="31"/>
+<rectangle x1="0.1378" y1="-2.5034" x2="0.3578" y2="-1.2034" layer="31"/>
+<rectangle x1="0.6478" y1="-2.5034" x2="0.8678" y2="-1.2034" layer="31"/>
+<rectangle x1="1.1378" y1="-2.5034" x2="1.3578" y2="-1.2034" layer="31"/>
+<rectangle x1="1.6378" y1="-2.5034" x2="1.8578" y2="-1.2034" layer="31"/>
+<rectangle x1="2.1378" y1="-2.5034" x2="2.3578" y2="-1.2034" layer="31"/>
+<rectangle x1="2.6378" y1="-2.5034" x2="2.8578" y2="-1.2034" layer="31"/>
+<rectangle x1="3.1378" y1="-2.5034" x2="3.3578" y2="-1.2034" layer="31"/>
+<rectangle x1="3.6378" y1="-2.5034" x2="3.8578" y2="-1.2034" layer="31"/>
+</package>
+<package name="SOT-416">
+<wire x1="0.9224" y1="0.4604" x2="0.9224" y2="-0.6604" width="0.1524" layer="51"/>
+<wire x1="0.9224" y1="-0.6604" x2="-0.9224" y2="-0.6604" width="0.1524" layer="51"/>
+<wire x1="-0.9224" y1="-0.6604" x2="-0.9224" y2="0.4604" width="0.1524" layer="51"/>
+<wire x1="-0.9224" y1="0.4604" x2="0.9224" y2="0.4604" width="0.1524" layer="51"/>
+<wire x1="-0.9224" y1="-0.1854" x2="-0.9224" y2="0.4604" width="0.1524" layer="21"/>
+<wire x1="-0.9224" y1="0.4604" x2="-0.6576" y2="0.4604" width="0.1524" layer="21"/>
+<wire x1="0.9224" y1="0.4604" x2="0.9224" y2="-0.1854" width="0.1524" layer="21"/>
+<wire x1="0.6326" y1="0.4604" x2="0.9224" y2="0.4604" width="0.1524" layer="21"/>
+<smd name="3" x="0" y="0.65" dx="0.5" dy="0.6" layer="1"/>
+<smd name="2" x="0.5" y="-0.65" dx="0.5" dy="0.6" layer="1"/>
+<smd name="1" x="-0.5" y="-0.65" dx="0.5" dy="0.6" layer="1"/>
+<text x="0" y="0" size="0.25" layer="25" align="center">&gt;NAME</text>
+<rectangle x1="-0.87" y1="-1.08" x2="0.87" y2="0.74" layer="29"/>
+</package>
+<package name="SOD-123FL">
+<wire x1="1.778" y1="0.635" x2="-1.8034" y2="0.635" width="0.1016" layer="51"/>
+<wire x1="1.778" y1="-0.635" x2="-1.778" y2="-0.635" width="0.1016" layer="51"/>
+<wire x1="0.7032" y1="0.6" x2="-0.3476" y2="0" width="0.2032" layer="21"/>
+<wire x1="-0.3476" y1="0" x2="0.7032" y2="-0.6" width="0.2032" layer="21"/>
+<wire x1="0.7032" y1="-0.6" x2="0.7032" y2="0.6" width="0.2032" layer="21"/>
+<smd name="C" x="-1.6383" y="0" dx="0.9144" dy="1.2192" layer="1"/>
+<smd name="A" x="1.6383" y="0" dx="0.9144" dy="1.2192" layer="1"/>
+<text x="0" y="0" size="0.381" layer="25" align="center">&gt;NAME</text>
+<rectangle x1="-1.0414" y1="-0.7874" x2="-0.4318" y2="0.7874" layer="21"/>
+<wire x1="-1.8034" y1="0.635" x2="-1.8034" y2="-0.635" width="0.1016" layer="51"/>
+<wire x1="1.778" y1="0.635" x2="1.778" y2="-0.635" width="0.1016" layer="51"/>
+<rectangle x1="-1.5748" y1="-0.635" x2="-1.3208" y2="0.635" layer="51"/>
 </package>
 </packages>
 <symbols>
@@ -11449,27 +11533,6 @@ Source: http://datasheets.maxim-ic.com/en/ds/MAX7042.pdf</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="AS-ITM-00007" prefix="Q">
-<description>MOSFET N-CH SGL 60V SOT-23</description>
-<gates>
-<gate name="A" symbol="N-FET" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="SOT23">
-<connects>
-<connect gate="A" pin="D" pad="3"/>
-<connect gate="A" pin="G" pad="1"/>
-<connect gate="A" pin="S" pad="2"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="PARTNO" value="AS-ITM-00007" constant="no"/>
-<attribute name="VALUE" value="2N7002P" constant="no"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="AS-ITM-00003" prefix="R">
 <description>RES 1.00K OHM 1/16W 1% 0402</description>
 <gates>
@@ -11628,7 +11691,7 @@ Source: http://datasheets.maxim-ic.com/en/ds/MAX7042.pdf</description>
 </devices>
 </deviceset>
 <deviceset name="AS-ITM-00008" prefix="C" uservalue="yes">
-<description>CAP CER 0.1UF 10V 10% X5R 0402</description>
+<description>CAP CER 0.1UF 16V 10% X5R 0402</description>
 <gates>
 <gate name="G$1" symbol="C-US" x="0" y="0"/>
 </gates>
@@ -11762,6 +11825,47 @@ Source: http://datasheets.maxim-ic.com/en/ds/MAX7042.pdf</description>
 </device>
 </devices>
 </deviceset>
+<deviceset name="AS-ITM-00110" prefix="Q">
+<description>MOSFET N-CH SGL 60V SOT-416</description>
+<gates>
+<gate name="A" symbol="N-FET" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SOT-416">
+<connects>
+<connect gate="A" pin="D" pad="3"/>
+<connect gate="A" pin="G" pad="1"/>
+<connect gate="A" pin="S" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PARTNO" value="AS-ITM-00110" constant="no"/>
+<attribute name="VALUE" value="2N7002PT" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="AS-ITM-00111" prefix="D">
+<description>DIODE SCHOTTKY 20V 1A SOD123L</description>
+<gates>
+<gate name="G$1" symbol="D" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SOD-123FL">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="C" pad="C"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PARTNO" value="AS-ITM-00111" constant="no"/>
+<attribute name="VALUE" value="MBR120VLSFT1G" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 </libraries>
@@ -11795,9 +11899,6 @@ Source: http://datasheets.maxim-ic.com/en/ds/MAX7042.pdf</description>
 <part name="VBATT" library="tinycircuits" deviceset="VBATT" device="" value="VBATT"/>
 <part name="Q1" library="tinycircuits" deviceset="AS-ITM-00006" device="" value="NTZD3152P">
 <attribute name="PARTNO" value="AS-ITM-00006"/>
-</part>
-<part name="Q2" library="tinycircuits" deviceset="AS-ITM-00007" device="" value="2N7002P">
-<attribute name="PARTNO" value="AS-ITM-00007"/>
 </part>
 <part name="+5V" library="tinycircuits" deviceset="+5V" device="" value="+5V"/>
 <part name="VCC" library="tinycircuits" deviceset="VCC" device="" value="VCC"/>
@@ -11852,6 +11953,9 @@ Source: http://datasheets.maxim-ic.com/en/ds/MAX7042.pdf</description>
 <attribute name="VALUE" value="0.1uF"/>
 </part>
 <part name="GND10" library="tinycircuits" deviceset="GND" device=""/>
+<part name="Q2" library="tinycircuits" deviceset="AS-ITM-00110" device="" value="2N7002PT"/>
+<part name="D3" library="tinycircuits" deviceset="AS-ITM-00111" device="" value="MBR120"/>
+<part name="GND11" library="tinycircuits" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -11863,7 +11967,7 @@ Source: http://datasheets.maxim-ic.com/en/ds/MAX7042.pdf</description>
 <text x="286.004" y="221.234" size="3.81" layer="94" font="vector">LED</text>
 <text x="340.868" y="17.272" size="3.556" layer="94" font="vector">TinyDuino - 20mm</text>
 <text x="327.152" y="6.35" size="3.556" layer="94" font="vector">AS-SCH-ASM2001</text>
-<text x="416.56" y="6.858" size="3.556" layer="94" font="vector">4</text>
+<text x="416.56" y="6.858" size="3.556" layer="94" font="vector">6</text>
 <text x="45.72" y="35.56" size="3.048" layer="91">Released under the Creative Commons Attribution Share-Alike 3.0 License</text>
 <text x="45.72" y="30.48" size="3.048" layer="91">http://creativecommons.org/licenses/by-sa/3.0</text>
 <text x="45.72" y="20.32" size="3.048" layer="91">Original Arduino Uno Design by Team Arduino</text>
@@ -11899,26 +12003,21 @@ Source: http://datasheets.maxim-ic.com/en/ds/MAX7042.pdf</description>
 <instance part="Q1" gate="G$1" x="185.42" y="208.28">
 <attribute name="PARTNO" x="185.42" y="208.28" size="1.778" layer="96" display="off"/>
 </instance>
-<instance part="Q2" gate="A" x="190.5" y="190.5" smashed="yes">
-<attribute name="NAME" x="185.42" y="189.992" size="1.778" layer="95"/>
-<attribute name="VALUE" x="184.404" y="184.658" size="1.778" layer="96"/>
-<attribute name="PARTNO" x="190.5" y="190.5" size="1.778" layer="96" display="off"/>
+<instance part="+5V" gate="1" x="154.94" y="213.36" smashed="yes">
+<attribute name="VALUE" x="157.48" y="215.9" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="+5V" gate="1" x="156.464" y="218.186" smashed="yes">
-<attribute name="VALUE" x="159.004" y="220.726" size="1.778" layer="96" rot="R180"/>
-</instance>
-<instance part="VCC" gate="VCC" x="175.26" y="218.44" smashed="yes">
-<attribute name="VALUE" x="177.8" y="220.98" size="1.778" layer="96" rot="R180"/>
+<instance part="VCC" gate="VCC" x="175.26" y="233.68" smashed="yes">
+<attribute name="VALUE" x="177.8" y="236.22" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="VBATT1" gate="VBATT" x="195.58" y="218.44" smashed="yes">
 <attribute name="VALUE" x="200.66" y="220.98" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="R3" gate="G$1" x="156.464" y="195.58" smashed="yes" rot="R90">
-<attribute name="NAME" x="154.94" y="197.8914" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="154.94" y="195.58" size="1.778" layer="96" rot="R180"/>
-<attribute name="PARTNO" x="156.464" y="195.58" size="1.778" layer="96" rot="R90" display="off"/>
+<instance part="R3" gate="G$1" x="154.94" y="195.58" smashed="yes" rot="R90">
+<attribute name="NAME" x="153.416" y="197.8914" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="153.416" y="195.58" size="1.778" layer="96" rot="R180"/>
+<attribute name="PARTNO" x="154.94" y="195.58" size="1.778" layer="96" rot="R90" display="off"/>
 </instance>
-<instance part="GND5" gate="1" x="156.464" y="185.42"/>
+<instance part="GND5" gate="1" x="154.94" y="185.42"/>
 <instance part="GND6" gate="1" x="198.12" y="182.88"/>
 <instance part="R2" gate="G$1" x="200.66" y="198.12" smashed="yes" rot="R90">
 <attribute name="NAME" x="202.438" y="198.6026" size="1.778" layer="95"/>
@@ -11981,10 +12080,10 @@ Source: http://datasheets.maxim-ic.com/en/ds/MAX7042.pdf</description>
 <attribute name="VALUE" x="137.414" y="199.009" size="1.778" layer="96"/>
 <attribute name="PARTNO" x="133.604" y="201.422" size="1.778" layer="96" display="off"/>
 </instance>
-<instance part="C1" gate="G$1" x="167.64" y="210.82" smashed="yes" rot="MR0">
-<attribute name="PARTNO" x="167.64" y="210.82" size="1.778" layer="96" rot="MR0" display="off"/>
-<attribute name="NAME" x="164.592" y="210.439" size="1.778" layer="95" rot="MR0"/>
-<attribute name="VALUE" x="164.592" y="208.407" size="1.778" layer="96" rot="MR0"/>
+<instance part="C1" gate="G$1" x="170.18" y="223.52" smashed="yes" rot="MR0">
+<attribute name="PARTNO" x="170.18" y="223.52" size="1.778" layer="96" rot="MR0" display="off"/>
+<attribute name="NAME" x="167.132" y="223.139" size="1.778" layer="95" rot="MR0"/>
+<attribute name="VALUE" x="167.132" y="221.107" size="1.778" layer="96" rot="MR0"/>
 </instance>
 <instance part="Y1" gate="G$1" x="144.78" y="130.556">
 <attribute name="PARTNO" x="144.78" y="130.556" size="1.778" layer="96" display="off"/>
@@ -11997,6 +12096,15 @@ Source: http://datasheets.maxim-ic.com/en/ds/MAX7042.pdf</description>
 <attribute name="PARTNO" x="147.32" y="119.38" size="1.778" layer="96" rot="MR0" display="off"/>
 </instance>
 <instance part="GND10" gate="1" x="147.32" y="111.76"/>
+<instance part="Q2" gate="A" x="190.5" y="190.5" smashed="yes">
+<attribute name="VALUE" x="184.404" y="184.404" size="1.778" layer="96"/>
+<attribute name="NAME" x="185.674" y="189.738" size="1.778" layer="95"/>
+</instance>
+<instance part="D3" gate="G$1" x="167.64" y="203.2" smashed="yes">
+<attribute name="NAME" x="166.37" y="205.2066" size="1.778" layer="95"/>
+<attribute name="VALUE" x="163.322" y="199.3646" size="1.778" layer="96"/>
+</instance>
+<instance part="GND11" gate="1" x="170.18" y="215.9"/>
 </instances>
 <busses>
 </busses>
@@ -12308,19 +12416,15 @@ Source: http://datasheets.maxim-ic.com/en/ds/MAX7042.pdf</description>
 <junction x="118.364" y="191.262"/>
 </segment>
 <segment>
-<wire x1="156.464" y1="187.96" x2="156.464" y2="190.5" width="0.1524" layer="91"/>
+<wire x1="154.94" y1="187.96" x2="154.94" y2="190.5" width="0.1524" layer="91"/>
 <pinref part="GND5" gate="1" pin="GND"/>
 <pinref part="R3" gate="G$1" pin="1"/>
-<pinref part="C1" gate="G$1" pin="2"/>
-<wire x1="167.64" y1="205.74" x2="167.64" y2="190.5" width="0.1524" layer="91"/>
-<wire x1="167.64" y1="190.5" x2="156.464" y2="190.5" width="0.1524" layer="91"/>
-<junction x="156.464" y="190.5"/>
 </segment>
 <segment>
 <wire x1="195.58" y1="187.96" x2="198.12" y2="187.96" width="0.1524" layer="91"/>
 <wire x1="198.12" y1="187.96" x2="198.12" y2="185.42" width="0.1524" layer="91"/>
-<pinref part="Q2" gate="A" pin="S"/>
 <pinref part="GND6" gate="1" pin="GND"/>
+<pinref part="Q2" gate="A" pin="S"/>
 </segment>
 <segment>
 <pinref part="GND7" gate="1" pin="GND"/>
@@ -12359,6 +12463,10 @@ Source: http://datasheets.maxim-ic.com/en/ds/MAX7042.pdf</description>
 <segment>
 <pinref part="C3" gate="G$1" pin="2"/>
 <pinref part="GND10" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="C1" gate="G$1" pin="2"/>
+<pinref part="GND11" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="AREF" class="0">
@@ -12406,9 +12514,9 @@ Source: http://datasheets.maxim-ic.com/en/ds/MAX7042.pdf</description>
 <wire x1="210.058" y1="208.28" x2="193.04" y2="208.28" width="0.1524" layer="91"/>
 <wire x1="210.058" y1="193.04" x2="200.66" y2="193.04" width="0.1524" layer="91"/>
 <junction x="200.66" y="193.04"/>
-<pinref part="Q2" gate="A" pin="D"/>
 <pinref part="Q1" gate="G$1" pin="G2"/>
 <pinref part="R2" gate="G$1" pin="1"/>
+<pinref part="Q2" gate="A" pin="D"/>
 </segment>
 </net>
 <net name="VBATT" class="0">
@@ -12442,23 +12550,23 @@ Source: http://datasheets.maxim-ic.com/en/ds/MAX7042.pdf</description>
 </net>
 <net name="+5V" class="0">
 <segment>
-<wire x1="156.464" y1="215.646" x2="156.464" y2="203.2" width="0.1524" layer="91"/>
-<wire x1="156.464" y1="203.2" x2="170.18" y2="203.2" width="0.1524" layer="91"/>
-<wire x1="170.18" y1="203.2" x2="172.72" y2="203.2" width="0.1524" layer="91"/>
-<wire x1="172.72" y1="203.2" x2="177.8" y2="203.2" width="0.1524" layer="91"/>
-<wire x1="177.8" y1="208.28" x2="172.72" y2="208.28" width="0.1524" layer="91"/>
-<wire x1="172.72" y1="208.28" x2="172.72" y2="203.2" width="0.1524" layer="91"/>
-<wire x1="156.464" y1="200.66" x2="156.464" y2="203.2" width="0.1524" layer="91"/>
-<wire x1="170.18" y1="203.2" x2="170.18" y2="187.96" width="0.1524" layer="91"/>
-<wire x1="170.18" y1="187.96" x2="185.42" y2="187.96" width="0.1524" layer="91"/>
-<junction x="172.72" y="203.2"/>
-<junction x="156.464" y="203.2"/>
-<junction x="170.18" y="203.2"/>
+<wire x1="154.94" y1="210.82" x2="154.94" y2="203.2" width="0.1524" layer="91"/>
+<wire x1="154.94" y1="203.2" x2="160.02" y2="203.2" width="0.1524" layer="91"/>
+<wire x1="160.02" y1="203.2" x2="162.56" y2="203.2" width="0.1524" layer="91"/>
+<wire x1="177.8" y1="208.28" x2="162.56" y2="208.28" width="0.1524" layer="91"/>
+<wire x1="162.56" y1="208.28" x2="162.56" y2="203.2" width="0.1524" layer="91"/>
+<wire x1="154.94" y1="200.66" x2="154.94" y2="203.2" width="0.1524" layer="91"/>
+<wire x1="160.02" y1="203.2" x2="160.02" y2="187.96" width="0.1524" layer="91"/>
+<wire x1="160.02" y1="187.96" x2="185.42" y2="187.96" width="0.1524" layer="91"/>
+<junction x="154.94" y="203.2"/>
+<junction x="160.02" y="203.2"/>
 <pinref part="+5V" gate="1" pin="+5V"/>
-<pinref part="Q1" gate="G$1" pin="D2"/>
 <pinref part="Q1" gate="G$1" pin="G1"/>
 <pinref part="R3" gate="G$1" pin="2"/>
 <pinref part="Q2" gate="A" pin="G"/>
+<pinref part="D3" gate="G$1" pin="A"/>
+<wire x1="162.56" y1="203.2" x2="165.1" y2="203.2" width="0.1524" layer="91"/>
+<junction x="162.56" y="203.2"/>
 </segment>
 <segment>
 <pinref part="+5V1" gate="1" pin="+5V"/>
@@ -12470,7 +12578,8 @@ Source: http://datasheets.maxim-ic.com/en/ds/MAX7042.pdf</description>
 <net name="VCC" class="0">
 <segment>
 <wire x1="177.8" y1="213.36" x2="175.26" y2="213.36" width="0.1524" layer="91"/>
-<wire x1="175.26" y1="213.36" x2="175.26" y2="215.9" width="0.1524" layer="91"/>
+<wire x1="175.26" y1="213.36" x2="175.26" y2="228.6" width="0.1524" layer="91"/>
+<wire x1="175.26" y1="228.6" x2="175.26" y2="231.14" width="0.1524" layer="91"/>
 <wire x1="193.04" y1="203.2" x2="195.58" y2="203.2" width="0.1524" layer="91"/>
 <wire x1="195.58" y1="203.2" x2="195.58" y2="195.58" width="0.1524" layer="91"/>
 <wire x1="195.58" y1="195.58" x2="175.26" y2="195.58" width="0.1524" layer="91"/>
@@ -12483,7 +12592,9 @@ Source: http://datasheets.maxim-ic.com/en/ds/MAX7042.pdf</description>
 <pinref part="Q1" gate="G$1" pin="S2"/>
 <pinref part="R2" gate="G$1" pin="2"/>
 <pinref part="C1" gate="G$1" pin="1"/>
-<wire x1="175.26" y1="213.36" x2="167.64" y2="213.36" width="0.1524" layer="91"/>
+<wire x1="170.18" y1="226.06" x2="170.18" y2="228.6" width="0.1524" layer="91"/>
+<wire x1="170.18" y1="228.6" x2="175.26" y2="228.6" width="0.1524" layer="91"/>
+<junction x="175.26" y="228.6"/>
 </segment>
 <segment>
 <wire x1="134.62" y1="110.236" x2="134.62" y2="107.696" width="0.1524" layer="91"/>
@@ -12563,6 +12674,13 @@ Source: http://datasheets.maxim-ic.com/en/ds/MAX7042.pdf</description>
 <pinref part="J2" gate="G$1" pin="10"/>
 <wire x1="302.26" y1="124.46" x2="314.96" y2="124.46" width="0.1524" layer="91"/>
 <label x="304.8" y="124.714" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="N$2" class="0">
+<segment>
+<pinref part="D3" gate="G$1" pin="C"/>
+<pinref part="Q1" gate="G$1" pin="D2"/>
+<wire x1="170.18" y1="203.2" x2="177.8" y2="203.2" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
