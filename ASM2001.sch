@@ -11986,9 +11986,9 @@ Source: http://datasheets.maxim-ic.com/en/ds/MAX7042.pdf</description>
 <part name="J4" library="tinycircuits" deviceset="AS-ITM-00231" device="" value="SM02B-SRSS-TB(LF)(SN)"/>
 <part name="VBATT4" library="tinycircuits" deviceset="VBATT" device="" value="VBATT"/>
 <part name="GND13" library="tinycircuits" deviceset="GND" device=""/>
-<part name="C5" library="tinycircuits" deviceset="AS-ITM-00242" device="" value="4.7uF">
-<attribute name="PARTNO" value="AS-ITM-00242"/>
-<attribute name="VALUE" value="4.7uF"/>
+<part name="C5" library="tinycircuits" deviceset="AS-ITM-00002" device="" value="10uF">
+<attribute name="PARTNO" value="AS-ITM-00002"/>
+<attribute name="VALUE" value="10uF"/>
 </part>
 <part name="GND14" library="tinycircuits" deviceset="GND" device=""/>
 <part name="D4" library="tinycircuits" deviceset="AS-ITM-00026" device="" value="AMBER">
@@ -12014,7 +12014,7 @@ Source: http://datasheets.maxim-ic.com/en/ds/MAX7042.pdf</description>
 <text x="92.964" y="145.034" size="3.81" layer="94" font="vector">LED</text>
 <text x="340.868" y="17.272" size="3.556" layer="94" font="vector">TinyDuino - 20mm</text>
 <text x="327.152" y="6.35" size="3.556" layer="94" font="vector">AS-SCH-ASM2001</text>
-<text x="416.56" y="6.858" size="3.556" layer="94" font="vector">8</text>
+<text x="416.56" y="6.858" size="3.556" layer="94" font="vector">9</text>
 <text x="45.72" y="35.56" size="3.048" layer="91">Released under the Creative Commons Attribution Share-Alike 3.0 License</text>
 <text x="45.72" y="30.48" size="3.048" layer="91">http://creativecommons.org/licenses/by-sa/3.0</text>
 <text x="45.72" y="20.32" size="3.048" layer="91">Original Arduino Uno Design by Team Arduino</text>
