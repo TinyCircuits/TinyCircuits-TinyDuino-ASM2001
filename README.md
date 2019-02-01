@@ -1,7 +1,7 @@
 # TinyCircuits TinyDuino Processor Board
 # ASM2001 Rev9
 
-The design files are located under design-files/  for the TinyCircuits ASM2001 Rev 9 PCB.  This is a Tiny processor board (Square Version, 20mm x 20mm) that uses the same microcontroller (Atmel Atmega328P) as the Arduino Uno and has stackable TinyShield support.  
+The design files are located under design_files/  for the TinyCircuits ASM2001 Rev 9 PCB.  This is a Tiny processor board (Square Version, 20mm x 20mm) that uses the same microcontroller (Atmel Atmega328P) as the Arduino Uno and has stackable TinyShield support.  
 
 Format is in Cadsoft Eagle format - Eagle version 6.2 was used for the original design.
 
